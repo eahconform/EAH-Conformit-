@@ -18,14 +18,17 @@
   --muted:#b9d4e9;
   --border:#2387bf;
 }
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+
 body{
   margin:0;
   background:var(--navy);
   color:var(--white);
   font-family:Arial,Helvetica,sans-serif;
 }
+
 button,input,textarea,select{font:inherit}
 button,a{touch-action:manipulation}
 a{color:inherit;text-decoration:none}
@@ -33,12 +36,14 @@ button{cursor:pointer}
 img{max-width:100%}
 .hidden{display:none!important}
 .container{width:min(1120px,92%);margin:auto}
+
 .gradient{
   background:linear-gradient(110deg,#fff,#b5cce6);
   background-clip:text;
   -webkit-background-clip:text;
   color:transparent;
 }
+
 .cyan{color:var(--cyan)}
 .gold{color:var(--gold)}
 .small{font-size:13px;color:var(--muted)}
@@ -46,6 +51,7 @@ h1,h2,h3{line-height:1.12}
 h1{font-size:clamp(36px,6vw,72px)}
 h2{font-size:clamp(28px,4vw,44px)}
 p{line-height:1.65}
+
 .btn{
   display:inline-flex;
   justify-content:center;
@@ -59,13 +65,17 @@ p{line-height:1.65}
   font-weight:800;
   box-shadow:0 7px 25px #00bfff33;
 }
+
 .btn.outline{background:#061d38}
+
 .btn.goldbtn{
   background:linear-gradient(120deg,#ad7a16,#ffda70);
   border-color:#ffe9a6;
   color:#07152c;
 }
+
 .btn:hover{filter:brightness(1.13)}
+
 .tag{
   display:inline-block;
   padding:10px 20px;
@@ -77,6 +87,7 @@ p{line-height:1.65}
   font-weight:800;
   letter-spacing:1px;
 }
+
 header{
   position:sticky;
   top:0;
@@ -85,6 +96,7 @@ header{
   border-bottom:1px solid #177bb8;
   backdrop-filter:blur(16px);
 }
+
 .navbar{
   display:flex;
   justify-content:space-between;
@@ -92,6 +104,7 @@ header{
   min-height:78px;
   gap:20px;
 }
+
 .brand{
   display:flex;
   align-items:center;
@@ -99,8 +112,15 @@ header{
   font-size:22px;
   font-weight:900;
 }
-.brand img{width:47px;height:47px;object-fit:contain}
+
+.brand img{
+  width:47px;
+  height:47px;
+  object-fit:contain;
+}
+
 .brand img.missing{display:none}
+
 #menuBtn{
   display:none;
   background:#0a3159;
@@ -109,7 +129,13 @@ header{
   padding:12px 17px;
   border-radius:11px;
 }
-nav{display:flex;gap:18px;align-items:center}
+
+nav{
+  display:flex;
+  gap:18px;
+  align-items:center;
+}
+
 nav button{
   background:none;
   border:0;
@@ -117,10 +143,13 @@ nav button{
   font-weight:700;
   padding:10px 2px;
 }
+
 nav button.active{color:var(--cyan)}
 nav button:hover{color:var(--cyan)}
+
 .page{display:none}
 .page.active{display:block}
+
 .hero{
   position:relative;
   min-height:440px;
@@ -133,6 +162,7 @@ nav button:hover{color:var(--cyan)}
     linear-gradient(135deg,#031126,#0b3765,#031126);
   border-bottom:1px solid #1685c2;
 }
+
 .hero:before{
   content:"";
   position:absolute;
@@ -146,6 +176,7 @@ nav button:hover{color:var(--cyan)}
   box-shadow:0 0 35px #00d9ff;
   pointer-events:none;
 }
+
 .hero:after{
   content:"";
   position:absolute;
@@ -153,21 +184,44 @@ nav button:hover{color:var(--cyan)}
   background:linear-gradient(90deg,#031126a8,transparent);
   pointer-events:none;
 }
+
 .hero .container{position:relative;z-index:1}
 .hero.center{text-align:center}
 .hero h1{margin:24px 0}
-.hero p{font-size:clamp(17px,2.5vw,22px);color:#d4e6f4}
-.hero.compact{min-height:340px;text-align:center}
-.hero.compact h1{font-size:clamp(35px,5vw,58px)}
+
+.hero p{
+  font-size:clamp(17px,2.5vw,22px);
+  color:#d4e6f4;
+}
+
+.hero.compact{
+  min-height:340px;
+  text-align:center;
+}
+
+.hero.compact h1{
+  font-size:clamp(35px,5vw,58px);
+}
+
 .hero.goldhero{
   background:
     radial-gradient(ellipse at 70% 20%,#a16e2555,transparent 55%),
     linear-gradient(135deg,#031126,#10284a,#031126);
 }
+
 section.content{padding:70px 0}
 .section-title{text-align:center;margin-bottom:38px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
-.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+}
+
+.grid.three{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+
 .panel{
   padding:28px;
   border:1px solid #247fba;
@@ -175,12 +229,15 @@ section.content{padding:70px 0}
   background:linear-gradient(140deg,#0b3968,#06172e);
   box-shadow:0 12px 35px #0004;
 }
+
 .panel h3{font-size:23px}
+
 .feature{
   text-align:center;
   padding:25px 12px;
   border:1px solid #1b6397;
 }
+
 .feature svg{
   width:38px;
   height:38px;
@@ -190,15 +247,169 @@ section.content{padding:70px 0}
   stroke-linecap:round;
   stroke-linejoin:round;
 }
-.feature h3{font-size:18px;margin:12px 0}
+
+.feature h3{
+  font-size:18px;
+  margin:12px 0;
+}
+
 .hero-home .container{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:35px;
   align-items:center;
 }
+
 .hero-home{min-height:650px}
-.hero-home .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+
+.hero-home .actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:25px;
+}
+
+/* =========================================
+   VIDEOS PROMOTIONNELLES EAH
+========================================= */
+
+.promo-section{
+  padding:40px 0 15px;
+}
+
+.promo-heading{
+  text-align:center;
+  margin-bottom:24px;
+}
+
+.promo-heading h2{
+  margin:15px 0 8px;
+}
+
+.promo-heading p{
+  color:var(--muted);
+  margin:8px 0;
+}
+
+.video-shell{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  border:1px solid #2387bf;
+  border-radius:22px;
+  background:#020812;
+  box-shadow:0 15px 45px #0006,
+             0 0 25px #00bfff18;
+}
+
+.video-shell.gold-video{
+  border-color:#c79d43;
+  box-shadow:0 15px 45px #0006,
+             0 0 25px #ffd16618;
+}
+
+.promo-video{
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:contain;
+  background:#020812;
+}
+
+.video-toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  padding:13px 16px;
+  background:linear-gradient(120deg,#082746,#04152c);
+  border-top:1px solid #2377ac;
+}
+
+.video-label{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  font-size:13px;
+  font-weight:700;
+  color:#d6eaff;
+}
+
+.video-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--cyan);
+  box-shadow:0 0 8px var(--cyan);
+}
+
+.video-actions{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.video-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  border:1px solid #358ac1;
+  border-radius:9px;
+  padding:9px 12px;
+  color:white;
+  background:#0b3158;
+  font-size:12px;
+  font-weight:700;
+}
+
+.video-button:hover{
+  background:#10558d;
+}
+
+.video-button svg{
+  width:18px;
+  height:18px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.video-error{
+  padding:25px;
+  text-align:center;
+  color:#d5eaff;
+}
+
+.video-error[hidden]{display:none}
+
+.video-caption{
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+  margin:12px 0 0;
+}
+
+.video-shell:fullscreen{
+  border:0;
+  border-radius:0;
+  background:black;
+}
+
+.video-shell:fullscreen .promo-video{
+  width:100%;
+  height:calc(100vh - 65px);
+  aspect-ratio:auto;
+}
+
+/* =========================================
+   CARTE NFC 3D
+========================================= */
+
 .card-scene{
   perspective:1100px;
   width:100%;
@@ -206,6 +417,7 @@ section.content{padding:70px 0}
   margin:25px auto;
   aspect-ratio:1.585;
 }
+
 .card-rotor{
   width:100%;
   height:100%;
@@ -213,10 +425,12 @@ section.content{padding:70px 0}
   transform-style:preserve-3d;
   animation:cardSpin 12s linear infinite;
 }
+
 @keyframes cardSpin{
   from{transform:rotateY(0)}
   to{transform:rotateY(360deg)}
 }
+
 .card-face{
   position:absolute;
   inset:0;
@@ -232,19 +446,52 @@ section.content{padding:70px 0}
   justify-content:space-between;
   background:linear-gradient(125deg,#031126,#0d5b9d,#031126);
 }
-.card-face.back{transform:rotateY(180deg)}
-.card-top{display:flex;align-items:center;justify-content:space-between;font-weight:900}
-.nfc-mark{display:flex;align-items:center;gap:6px}
-.nfc-mark svg{width:31px;height:31px}
-.card-title{font-size:clamp(22px,3vw,36px);font-weight:900;line-height:1.1}
-.stars{color:var(--gold);letter-spacing:3px;font-size:25px}
-.card-bottom{font-size:clamp(8px,1vw,11px)}
+
+.card-face.back{
+  transform:rotateY(180deg);
+}
+
+.card-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-weight:900;
+}
+
+.nfc-mark{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.nfc-mark svg{
+  width:31px;
+  height:31px;
+}
+
+.card-title{
+  font-size:clamp(22px,3vw,36px);
+  font-weight:900;
+  line-height:1.1;
+}
+
+.stars{
+  color:var(--gold);
+  letter-spacing:3px;
+  font-size:25px;
+}
+
+.card-bottom{
+  font-size:clamp(8px,1vw,11px);
+}
+
 .profile-layout{
   display:grid;
   grid-template-columns:23% minmax(0,1fr) 25%;
   gap:8px;
   align-items:center;
 }
+
 .profile-photo{
   width:100%;
   aspect-ratio:3/4;
@@ -253,8 +500,15 @@ section.content{padding:70px 0}
   overflow:hidden;
   background:#164b7c;
 }
-.profile-photo img{width:100%;height:100%;object-fit:cover}
+
+.profile-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
 .profile-fields{min-width:0}
+
 .profile-fields div{
   display:grid;
   grid-template-columns:40% 60%;
@@ -262,13 +516,17 @@ section.content{padding:70px 0}
   padding:4px 0;
   font-size:clamp(7px,.9vw,11px);
 }
+
 .profile-fields b{color:#a6ecff}
+
 .profile-fields span{
   overflow:hidden;
   white-space:nowrap;
   text-overflow:ellipsis;
 }
+
 .qr-area{text-align:center}
+
 .qr-area img{
   display:block;
   width:100%;
@@ -276,8 +534,14 @@ section.content{padding:70px 0}
   padding:5px;
   border-radius:6px;
 }
-.qr-area small{font-size:9px;font-weight:800}
+
+.qr-area small{
+  font-size:9px;
+  font-weight:800;
+}
+
 .card-controls{text-align:center}
+
 .card-controls button{
   margin:4px;
   padding:10px 15px;
@@ -286,7 +550,13 @@ section.content{padding:70px 0}
   border-radius:10px;
   background:#082e55;
 }
-.card-controls button:hover{background:#10558d}
+
+.card-controls button:hover{
+  background:#10558d;
+}
+
+/* TELEPHONES */
+
 .phone{
   width:245px;
   max-width:100%;
@@ -297,6 +567,7 @@ section.content{padding:70px 0}
   background:#071124;
   box-shadow:0 15px 35px #0009,0 0 25px #00bfff33;
 }
+
 .phone-screen{
   border-radius:22px;
   padding:24px 13px;
@@ -304,7 +575,9 @@ section.content{padding:70px 0}
   background:linear-gradient(155deg,#09589c,#031126);
   text-align:center;
 }
+
 .phone-screen h3{margin:15px 0}
+
 .phone-line{
   padding:10px;
   border-radius:30px;
@@ -314,11 +587,15 @@ section.content{padding:70px 0}
   font-size:12px;
   font-weight:800;
 }
+
 .price{
   font-size:34px;
   color:var(--gold);
   font-weight:900;
 }
+
+/* OFFRES ET CALCULATEUR */
+
 .pack{
   border:2px solid #2d8ec4;
   border-radius:15px;
@@ -326,12 +603,15 @@ section.content{padding:70px 0}
   background:#092f56;
   cursor:pointer;
 }
+
 .pack.selected{
   border-color:var(--cyan);
   box-shadow:0 0 20px #00d9ff55;
 }
+
 .pack input{accent-color:var(--cyan)}
 .pack b{font-size:25px}
+
 .option{
   display:flex;
   justify-content:space-between;
@@ -340,9 +620,20 @@ section.content{padding:70px 0}
   gap:10px;
   border-bottom:1px solid #ffffff22;
 }
-.option input{accent-color:var(--cyan);width:19px;height:19px}
-.option label{flex:1;cursor:pointer}
+
+.option input{
+  accent-color:var(--cyan);
+  width:19px;
+  height:19px;
+}
+
+.option label{
+  flex:1;
+  cursor:pointer;
+}
+
 .option small{color:var(--gold)}
+
 .total{
   padding:22px;
   border:2px solid var(--gold);
@@ -354,10 +645,25 @@ section.content{padding:70px 0}
   gap:10px;
   margin-top:20px;
 }
-.total strong{font-size:32px;color:var(--gold)}
+
+.total strong{
+  font-size:32px;
+  color:var(--gold);
+}
+
+/* FORMULAIRES */
+
 .form-field{margin-bottom:17px}
-.form-field label{display:block;margin-bottom:7px;font-weight:700}
-.form-field input,.form-field select,.form-field textarea{
+
+.form-field label{
+  display:block;
+  margin-bottom:7px;
+  font-weight:700;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea{
   display:block;
   width:100%;
   padding:14px;
@@ -366,16 +672,29 @@ section.content{padding:70px 0}
   background:#f5f9ff;
   color:#07172d;
 }
-.form-field textarea{min-height:120px;resize:vertical}
-.form-field input[type=file]{font-size:13px}
-.form-field input:focus,.form-field textarea:focus{
+
+.form-field textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+.form-field input[type=file]{
+  font-size:13px;
+}
+
+.form-field input:focus,
+.form-field textarea:focus{
   outline:2px solid var(--cyan);
 }
+
+/* PORTFOLIO */
+
 .portfolio{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:24px;
 }
+
 .portfolio-card{
   min-height:300px;
   border:1px solid #4fa9dd;
@@ -390,6 +709,7 @@ section.content{padding:70px 0}
   cursor:pointer;
   box-shadow:0 12px 30px #0005;
 }
+
 .portfolio-card:before{
   content:"";
   position:absolute;
@@ -401,6 +721,7 @@ section.content{padding:70px 0}
   top:-90px;
   box-shadow:0 0 22px var(--cyan);
 }
+
 .portfolio-card:after{
   content:"";
   position:absolute;
@@ -413,15 +734,37 @@ section.content{padding:70px 0}
   transform:rotate(-8deg);
   opacity:.8;
 }
-.portfolio-card>*{position:relative;z-index:1}
-.portfolio-card .symbol{font-size:42px;margin-bottom:auto}
-.portfolio-card h3{font-size:28px;margin-bottom:5px}
-.portfolio-card p{margin:0;color:#c7e2f5}
-.portfolio-card:hover{transform:translateY(-4px);transition:.2s}
+
+.portfolio-card>*{
+  position:relative;
+  z-index:1;
+}
+
+.portfolio-card .symbol{
+  font-size:42px;
+  margin-bottom:auto;
+}
+
+.portfolio-card h3{
+  font-size:28px;
+  margin-bottom:5px;
+}
+
+.portfolio-card p{
+  margin:0;
+  color:#c7e2f5;
+}
+
+.portfolio-card:hover{
+  transform:translateY(-4px);
+  transition:.2s;
+}
+
 .portfolio-card.has-image{
   background-size:cover;
   background-position:center;
 }
+
 .portfolio-card.has-image:after{
   background:linear-gradient(transparent,#031126dd);
   height:100%;
@@ -430,6 +773,7 @@ section.content{padding:70px 0}
   border-radius:0;
   transform:none;
 }
+
 .preview-frame{
   width:100%;
   min-height:620px;
@@ -437,18 +781,36 @@ section.content{padding:70px 0}
   border-radius:15px;
   background:#fff;
 }
+
 .link-external{margin:20px 0}
+
 footer{
   border-top:1px solid #2377ac;
   padding:35px 0;
   background:#020b1b;
 }
-footer .container{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
+
+footer .container{
+  display:flex;
+  justify-content:space-between;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
 footer a{color:#b9eaff}
 footer a:hover{color:white}
-.notice{color:#bad5e8;font-size:12px}
+
+.notice{
+  color:#bad5e8;
+  font-size:12px;
+}
+
+/* RESPONSIVE */
+
 @media(max-width:900px){
+
   #menuBtn{display:block}
+
   nav{
     display:none;
     position:absolute;
@@ -463,580 +825,2703 @@ footer a:hover{color:white}
     max-height:70vh;
     overflow:auto;
   }
+
   nav.open{display:flex}
-  nav button{width:100%;padding:13px;text-align:center}
-  nav button.active{background:#105a99;border-radius:10px;color:white}
-  .hero-home .container{grid-template-columns:1fr}
+
+  nav button{
+    width:100%;
+    padding:13px;
+    text-align:center;
+  }
+
+  nav button.active{
+    background:#105a99;
+    border-radius:10px;
+    color:white;
+  }
+
+  .hero-home .container{
+    grid-template-columns:1fr;
+  }
+
   .hero-home{text-align:center}
-  .hero-home .actions{justify-content:center}
-  .grid.three{grid-template-columns:1fr 1fr}
+
+  .hero-home .actions{
+    justify-content:center;
+  }
+
+  .grid.three{
+    grid-template-columns:1fr 1fr;
+  }
 }
+
 @media(max-width:600px){
+
   .brand{font-size:17px}
-  .brand img{width:38px;height:38px}
-  .hero{padding:55px 0;min-height:350px}
+
+  .brand img{
+    width:38px;
+    height:38px;
+  }
+
+  .hero{
+    padding:55px 0;
+    min-height:350px;
+  }
+
   .hero-home{min-height:0}
-  .grid,.grid.three,.portfolio{grid-template-columns:1fr}
+
+  .grid,.grid.three,.portfolio{
+    grid-template-columns:1fr;
+  }
+
   .panel{padding:20px}
   section.content{padding:45px 0}
   .card-scene{max-width:100%}
   .card-face{border-radius:14px}
-  .card-title{font-size:clamp(19px,6vw,30px)}
+
+  .card-title{
+    font-size:clamp(19px,6vw,30px);
+  }
+
   .card-top{font-size:12px}
-  .nfc-mark svg{width:24px;height:24px}
+
+  .nfc-mark svg{
+    width:24px;
+    height:24px;
+  }
+
   .stars{font-size:20px}
   .profile-layout{gap:4px}
-  .profile-fields div{font-size:clamp(6px,1.6vw,9px);padding:2px 0}
+
+  .profile-fields div{
+    font-size:clamp(6px,1.6vw,9px);
+    padding:2px 0;
+  }
+
   .qr-area small{font-size:7px}
   .total strong{font-size:26px}
   .portfolio-card{min-height:250px}
+
+  .promo-section{
+    padding:25px 0 10px;
+  }
+
+  .video-shell{
+    border-radius:13px;
+  }
+
+  .video-toolbar{
+    padding:10px;
+    justify-content:center;
+  }
+
+  .video-label{
+    width:100%;
+    justify-content:center;
+    font-size:11px;
+  }
+
+  .video-actions{
+    justify-content:center;
+  }
+
+  .video-button{
+    padding:8px 10px;
+    font-size:11px;
+  }
+
+  .promo-heading h2{
+    font-size:27px;
+  }
+
+  .preview-frame{
+    min-height:550px;
+  }
 }
+
 @media(prefers-reduced-motion:reduce){
   .card-rotor{animation:none}
+  html{scroll-behavior:auto}
 }
 </style>
 </head>
 
 <body>
 
+<!-- =====================================
+     NAVIGATION
+====================================== -->
+
 <header>
 <div class="container navbar">
+
   <a href="#accueil" class="brand" onclick="showPage('accueil')">
-    <img src="logo.png" alt="Logo EAH" onerror="this.classList.add('missing')">
-    <span>EAH <span class="cyan">Conformités</span></span>
+
+    <img src="logo.png"
+         alt="Logo EAH"
+         onerror="this.classList.add('missing')">
+
+    <span>
+      EAH <span class="cyan">Conformités</span>
+    </span>
+
   </a>
-  <button id="menuBtn" type="button" aria-expanded="false" onclick="toggleMenu()">☰ Menu</button>
+
+  <button id="menuBtn"
+          type="button"
+          aria-expanded="false"
+          onclick="toggleMenu()">
+    ☰ Menu
+  </button>
+
   <nav id="navigation">
-    <button data-page="accueil" onclick="showPage('accueil')">Accueil</button>
-    <button data-page="starter" onclick="showPage('starter')">Offre Starter</button>
-    <button data-page="gold" onclick="showPage('gold')">EAH Gold</button>
-    <button data-page="realisations" onclick="showPage('realisations')">Réalisations</button>
-    <button data-page="contact" onclick="showPage('contact')">Contact</button>
-    <button onclick="showPage('contact')" class="gold">Demander un devis</button>
+
+    <button data-page="accueil"
+            onclick="showPage('accueil')">
+      Accueil
+    </button>
+
+    <button data-page="starter"
+            onclick="showPage('starter')">
+      Offre Starter
+    </button>
+
+    <button data-page="gold"
+            onclick="showPage('gold')">
+      EAH Gold
+    </button>
+
+    <button data-page="realisations"
+            onclick="showPage('realisations')">
+      Réalisations
+    </button>
+
+    <button data-page="contact"
+            onclick="showPage('contact')">
+      Contact
+    </button>
+
+    <button onclick="showPage('contact')"
+            class="gold">
+      Demander un devis
+    </button>
+
   </nav>
+
 </div>
 </header>
 
 <main>
 
-<!-- ACCUEIL -->
+<!-- =====================================
+     ACCUEIL
+====================================== -->
+
 <div id="accueil" class="page active">
-<section class="hero hero-home" data-banner="bandeau-accueil.jpg">
+
+<section class="hero hero-home"
+         data-banner="bandeau-accueil.jpg">
+
 <div class="container">
+
   <div>
-    <span class="tag">EAH CONFORMITÉS • NFC & DIGITAL</span>
-    <h1><span class="gradient">Cartes NFC & solutions digitales</span><br><span class="cyan">professionnelles</span></h1>
-    <p>Une carte et une page internet personnalisée à votre image.</p>
-    <p>Développez votre visibilité, votre communication et votre présence numérique.</p>
+
+    <span class="tag">
+      EAH CONFORMITÉS • NFC & DIGITAL
+    </span>
+
+    <h1>
+      <span class="gradient">
+        Cartes NFC & solutions digitales
+      </span>
+      <br>
+      <span class="cyan">professionnelles</span>
+    </h1>
+
+    <p>
+      Une carte et une page internet personnalisée à votre image.
+    </p>
+
+    <p>
+      Développez votre visibilité, votre communication
+      et votre présence numérique.
+    </p>
+
     <div class="actions">
-      <button class="btn" onclick="showPage('starter')">Découvrir nos offres →</button>
-      <button class="btn outline" onclick="showPage('realisations')">Nos réalisations</button>
+
+      <button class="btn"
+              onclick="showPage('starter')">
+        Découvrir nos offres →
+      </button>
+
+      <button class="btn outline"
+              onclick="showPage('realisations')">
+        Nos réalisations
+      </button>
+
     </div>
+
   </div>
+
   <div>
+
     <div class="card-scene">
+
       <div class="card-rotor" id="cardRotor">
 
         <!-- RECTO -->
+
         <div class="card-face front" id="cardFront">
+
           <div class="card-top">
+
             <span>EAH <span class="cyan">✓</span></span>
+
             <span class="nfc-mark">
+
               <svg viewBox="0 0 36 36" aria-hidden="true">
-                <path d="M7 14 Q14 18 7 22 M13 9 Q25 18 13 27 M19 4 Q38 18 19 32" fill="none" stroke="#00d9ff" stroke-width="4" stroke-linecap="round"/>
+
+                <path
+                  d="M7 14 Q14 18 7 22 M13 9 Q25 18 13 27 M19 4 Q38 18 19 32"
+                  fill="none"
+                  stroke="#00d9ff"
+                  stroke-width="4"
+                  stroke-linecap="round"/>
+
               </svg>
+
               NFC
+
             </span>
+
           </div>
+
           <div class="card-title">
-            EAH <span class="cyan">✓</span><br>Conformités
+
+            EAH <span class="cyan">✓</span>
+            <br>
+            Conformités
+
             <div class="stars">★★★★★</div>
+
           </div>
-          <div class="card-bottom">Référencement · Site internet · Communication · E-commerce</div>
+
+          <div class="card-bottom">
+            Référencement · Site internet · Communication · E-commerce
+          </div>
+
         </div>
 
         <!-- VERSO -->
+
         <div class="card-face back" id="cardBack">
-          <div style="font-weight:900;font-size:clamp(11px,2vw,17px)">PROFIL NUMÉRIQUE <span class="cyan">✓</span></div>
+
+          <div style="font-weight:900;font-size:clamp(11px,2vw,17px)">
+            PROFIL NUMÉRIQUE <span class="cyan">✓</span>
+          </div>
+
           <div class="profile-layout">
+
             <div class="profile-photo">
-              <img id="profileImage" src="profil.jpg" alt="Portrait de profil">
+
+              <img id="profileImage"
+                   src="profil.jpg"
+                   alt="Portrait de profil">
+
             </div>
+
             <div class="profile-fields">
+
               <div><b>Nom</b><span>Martin</span></div>
               <div><b>Prénom</b><span>Alex</span></div>
               <div><b>Naissance</b><span>01/01/2000</span></div>
               <div><b>E-mail</b><span>alex@example.com</span></div>
               <div><b>Groupe</b><span>Adhérents</span></div>
               <div><b>Identifiant</b><span>EAH-001</span></div>
+
             </div>
+
             <div class="qr-area">
-              <img id="cardQR" alt="QR code vers le site">
+
+              <img id="cardQR"
+                   alt="QR code vers le site">
+
               <small>SCANNEZ-MOI</small>
+
             </div>
+
           </div>
-          <div class="card-bottom">EAH Conformités · Profil de démonstration</div>
+
+          <div class="card-bottom">
+            EAH Conformités · Profil de démonstration
+          </div>
+
         </div>
 
       </div>
+
     </div>
+
     <div class="card-controls">
-      <button id="pauseCard" onclick="toggleRotation()">⏸ Arrêter la rotation</button>
-      <button id="flipCard" onclick="flipCard()">Voir le verso</button>
+
+      <button id="pauseCard"
+              onclick="toggleRotation()">
+        ⏸ Arrêter la rotation
+      </button>
+
+      <button id="flipCard"
+              onclick="flipCard()">
+        Voir le verso
+      </button>
+
     </div>
+
   </div>
+
 </div>
 </section>
 
+<!-- VIDEO ACCUEIL -->
+
+<section class="promo-section">
+
+  <div class="container">
+
+    <div class="promo-heading">
+
+      <span class="tag">DÉCOUVREZ EAH CONFORMITÉS</span>
+
+      <h2>
+        Votre communication prend une
+        <span class="cyan">nouvelle dimension</span>
+      </h2>
+
+      <p>
+        Découvrez nos solutions connectées en vidéo.
+      </p>
+
+    </div>
+
+    <div class="video-mount"
+         data-video="videos/acceuil.mp4"
+         data-title="Présentation EAH Conformités"
+         data-poster="bandeau-accueil.jpg">
+    </div>
+
+  </div>
+
+</section>
+
+<!-- AVANTAGES -->
+
 <section class="content">
+
 <div class="container">
-  <div class="grid" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+
+  <div class="grid"
+       style="grid-template-columns:repeat(2,minmax(0,1fr))">
+
     <div class="feature">
-      <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="7"/><circle cx="20" cy="20" r="2"/></svg>
+
+      <svg viewBox="0 0 40 40">
+        <circle cx="20" cy="20" r="14"/>
+        <circle cx="20" cy="20" r="7"/>
+        <circle cx="20" cy="20" r="2"/>
+      </svg>
+
       <h3>Visibilité</h3>
+
     </div>
+
     <div class="feature">
-      <svg viewBox="0 0 40 40"><path d="M22 3L9 22h11l-3 15 15-22H21z"/></svg>
+
+      <svg viewBox="0 0 40 40">
+        <path d="M22 3L9 22h11l-3 15 15-22H21z"/>
+      </svg>
+
       <h3>Rapidité</h3>
+
     </div>
+
     <div class="feature">
-      <svg viewBox="0 0 40 40"><circle cx="20" cy="12" r="7"/><path d="M7 35v-5c0-8 6-12 13-12s13 4 13 12v5"/><path d="M27 7l4 4 6-7"/></svg>
+
+      <svg viewBox="0 0 40 40">
+        <circle cx="20" cy="12" r="7"/>
+        <path d="M7 35v-5c0-8 6-12 13-12s13 4 13 12v5"/>
+        <path d="M27 7l4 4 6-7"/>
+      </svg>
+
       <h3>Personnalisation</h3>
+
     </div>
+
     <div class="feature">
-      <svg viewBox="0 0 40 40"><path d="M5 30L15 20l8 7L36 9"/><path d="M26 9h10v10"/></svg>
+
+      <svg viewBox="0 0 40 40">
+        <path d="M5 30L15 20l8 7L36 9"/>
+        <path d="M26 9h10v10"/>
+      </svg>
+
       <h3>Évolutivité</h3>
+
     </div>
+
   </div>
+
 </div>
+
 </section>
 
+<!-- PRESENTATION DES OFFRES -->
+
 <section class="content">
+
 <div class="container">
+
   <div class="section-title">
+
     <span class="tag">NOS SOLUTIONS</span>
+
     <h2>Une solution pour chaque ambition</h2>
+
   </div>
+
   <div class="grid">
+
     <div class="panel">
+
       <h2>Offre <span class="cyan">Starter</span></h2>
-      <p>Une carte NFC personnalisée et une page internet à votre image.</p>
+
+      <p>
+        Une carte NFC personnalisée et une page internet à votre image.
+      </p>
+
       <div class="phone">
+
         <div class="phone-screen">
-          <h3>EAH <span class="cyan">✓</span><br>Conformités</h3>
+
+          <h3>
+            EAH <span class="cyan">✓</span>
+            <br>
+            Conformités
+          </h3>
+
           <div class="stars">★★★★★</div>
+
           <div class="phone-line">☎ Nous contacter</div>
           <div class="phone-line">★ Avis Google</div>
           <div class="phone-line">◎ Réseaux sociaux</div>
           <div class="phone-line">▶ Vidéos</div>
           <div class="phone-line">▦ Réservation</div>
+
         </div>
+
       </div>
+
       <p class="price">Dès 40 €</p>
-      <button class="btn" onclick="showPage('starter')">Configurer ma carte →</button>
+
+      <button class="btn"
+              onclick="showPage('starter')">
+        Configurer ma carte →
+      </button>
+
     </div>
+
     <div class="panel">
+
       <h2>EAH <span class="gold">GOLD ♛</span></h2>
-      <p>Une carte et une plateforme professionnelle avec profils numériques.</p>
+
+      <p>
+        Une carte et une plateforme professionnelle
+        avec profils numériques.
+      </p>
+
       <div class="phone">
+
         <div class="phone-screen">
+
           <h3>PROFIL NUMÉRIQUE</h3>
+
           <div style="font-size:55px">👤</div>
+
           <div class="phone-line">Mes informations</div>
           <div class="phone-line">Mes réservations</div>
           <div class="phone-line">Mes statistiques</div>
           <div class="phone-line">Mes avantages</div>
+
         </div>
+
       </div>
+
       <p class="price">Prix sur devis</p>
-      <button class="btn goldbtn" onclick="showPage('gold')">Découvrir EAH Gold →</button>
+
+      <button class="btn goldbtn"
+              onclick="showPage('gold')">
+        Découvrir EAH Gold →
+      </button>
+
     </div>
+
   </div>
-</div>
-</section>
+
 </div>
 
-<!-- STARTER -->
-<div id="starter" class="page">
-<section class="hero compact" data-banner="bandeau-starter.jpg">
-<div class="container">
-  <span class="tag">OFFRE STARTER</span>
-  <h1>Créez votre <span class="cyan">carte NFC</span></h1>
-  <p>Configurez votre pack, sélectionnez vos options et obtenez un prix instantané.</p>
-</div>
 </section>
-<section class="content">
+
+</div>
+
+<!-- =====================================
+     OFFRE STARTER
+====================================== -->
+
+<div id="starter" class="page">
+
+<section class="hero compact"
+         data-banner="bandeau-starter.jpg">
+
 <div class="container">
+
+  <span class="tag">OFFRE STARTER</span>
+
+  <h1>
+    Créez votre <span class="cyan">carte NFC</span>
+  </h1>
+
+  <p>
+    Configurez votre pack, sélectionnez vos options
+    et obtenez un prix instantané.
+  </p>
+
+</div>
+
+</section>
+
+<!-- VIDEO STARTER -->
+
+<section class="promo-section">
+
+  <div class="container">
+
+    <div class="promo-heading">
+
+      <span class="tag">LA CARTE NFC CONNECTÉE</span>
+
+      <h2>
+        Une carte,
+        <span class="cyan">de multiples possibilités</span>
+      </h2>
+
+      <p>
+        Découvrez comment une carte NFC peut transformer
+        votre communication.
+      </p>
+
+    </div>
+
+    <div class="video-mount"
+         data-video="videos/Nfc.mp4"
+         data-title="Présentation de l'offre Starter"
+         data-poster="bandeau-starter.jpg">
+    </div>
+
+  </div>
+
+</section>
+
+<section class="content">
+
+<div class="container">
+
 <div class="grid">
+
   <div class="panel">
+
     <h2>1. Choisissez votre pack</h2>
-    <div class="pack selected" data-pack="1" onclick="selectPack(1)">
-      <label><input type="radio" name="pack" value="1" checked> <b>40 €</b> — 1 carte NFC</label>
+
+    <div class="pack selected"
+         data-pack="1"
+         onclick="selectPack(1)">
+
+      <label>
+
+        <input type="radio"
+               name="pack"
+               value="1"
+               checked>
+
+        <b>40 €</b> — 1 carte NFC
+
+      </label>
+
     </div>
+
     <br>
-    <div class="pack" data-pack="5" onclick="selectPack(5)">
-      <label><input type="radio" name="pack" value="5"> <b>70 €</b> — 5 cartes (14 €/carte)</label>
+
+    <div class="pack"
+         data-pack="5"
+         onclick="selectPack(5)">
+
+      <label>
+
+        <input type="radio"
+               name="pack"
+               value="5">
+
+        <b>70 €</b> — 5 cartes (14 €/carte)
+
+      </label>
+
     </div>
+
     <br>
-    <div class="pack" data-pack="10" onclick="selectPack(10)">
-      <label><input type="radio" name="pack" value="10"> <b>100 €</b> — 10 cartes (10 €/carte)</label>
+
+    <div class="pack"
+         data-pack="10"
+         onclick="selectPack(10)">
+
+      <label>
+
+        <input type="radio"
+               name="pack"
+               value="10">
+
+        <b>100 €</b> — 10 cartes (10 €/carte)
+
+      </label>
+
     </div>
 
     <h2>2. Sélectionnez vos options</h2>
-    <p class="small">La première option cochée est gratuite. Chaque option supplémentaire coûte 5 € par commande.</p>
+
+    <p class="small">
+
+      La première option cochée est gratuite.
+      Chaque option supplémentaire coûte 5 € par commande.
+
+    </p>
+
     <div id="optionsList"></div>
 
     <div class="total">
+
       <div>
+
         <b>Votre configuration</b>
-        <div id="priceDetails" class="small">40 € de cartes + 0 € d'options</div>
+
+        <div id="priceDetails" class="small">
+          40 € de cartes + 0 € d'options
+        </div>
+
       </div>
+
       <strong id="totalPrice">40 €</strong>
+
     </div>
+
   </div>
 
   <div class="panel">
+
     <h2>3. Votre demande</h2>
-    <p>Complétez le formulaire et ajoutez votre logo pour recevoir une proposition personnalisée.</p>
-    <form action="https://formsubmit.co/Goin.eah@gmail.com" method="POST" enctype="multipart/form-data" onsubmit="prepareStarter()">
-      <input type="hidden" name="_subject" value="Nouvelle commande EAH Starter">
-      <input type="hidden" name="_captcha" value="true">
-      <input type="hidden" name="Pack" id="formPack">
-      <input type="hidden" name="Options" id="formOptions">
-      <input type="hidden" name="Prix total" id="formPrice">
 
-      <div class="form-field"><label>Nom et prénom *</label><input name="Nom" required></div>
-      <div class="form-field"><label>Entreprise</label><input name="Entreprise"></div>
-      <div class="form-field"><label>Adresse e-mail *</label><input type="email" name="email" required></div>
-      <div class="form-field"><label>Téléphone</label><input type="tel" name="Telephone"></div>
-      <div class="form-field"><label>Logo de votre entreprise</label><input type="file" name="attachment" accept="image/png,image/jpeg,image/webp"></div>
-      <div class="form-field"><label>Informations et liens souhaités</label><textarea name="Informations" placeholder="Site internet, réseaux sociaux, avis Google, couleurs souhaitées..."></textarea></div>
-      <label class="small"><input type="checkbox" required> J'accepte que mes informations soient utilisées pour traiter ma demande.</label>
+    <p>
+      Complétez le formulaire et ajoutez votre logo
+      pour recevoir une proposition personnalisée.
+    </p>
+
+    <form action="https://formsubmit.co/Goin.eah@gmail.com"
+          method="POST"
+          enctype="multipart/form-data"
+          onsubmit="prepareStarter()">
+
+      <input type="hidden"
+             name="_subject"
+             value="Nouvelle commande EAH Starter">
+
+      <input type="hidden"
+             name="_captcha"
+             value="true">
+
+      <input type="hidden"
+             name="Pack"
+             id="formPack">
+
+      <input type="hidden"
+             name="Options"
+             id="formOptions">
+
+      <input type="hidden"
+             name="Prix total"
+             id="formPrice">
+
+      <div class="form-field">
+
+        <label>Nom et prénom *</label>
+
+        <input name="Nom" required>
+
+      </div>
+
+      <div class="form-field">
+
+        <label>Entreprise</label>
+
+        <input name="Entreprise">
+
+      </div>
+
+      <div class="form-field">
+
+        <label>Adresse e-mail *</label>
+
+        <input type="email"
+               name="email"
+               required>
+
+      </div>
+
+      <div class="form-field">
+
+        <label>Téléphone</label>
+
+        <input type="tel" name="Telephone">
+
+      </div>
+
+      <div class="form-field">
+
+        <label>Logo de votre entreprise</label>
+
+        <input type="file"
+               name="attachment"
+               accept="image/png,image/jpeg,image/webp">
+
+      </div>
+
+      <div class="form-field">
+
+        <label>Informations et liens souhaités</label>
+
+        <textarea
+          name="Informations"
+          placeholder="Site internet, réseaux sociaux, avis Google, couleurs souhaitées..."></textarea>
+
+      </div>
+
+      <label class="small">
+
+        <input type="checkbox" required>
+
+        J'accepte que mes informations soient utilisées
+        pour traiter ma demande.
+
+      </label>
+
       <br><br>
-      <button class="btn" type="submit">Envoyer ma demande →</button>
+
+      <button class="btn" type="submit">
+        Envoyer ma demande →
+      </button>
+
     </form>
-    <p class="notice">Demande sans paiement immédiat. La commande sera confirmée après échange.</p>
+
+    <p class="notice">
+      Demande sans paiement immédiat.
+      La commande sera confirmée après échange.
+    </p>
+
   </div>
-</div>
-</div>
-</section>
+
 </div>
 
-<!-- GOLD -->
-<div id="gold" class="page">
-<section class="hero compact goldhero" data-banner="bandeau-gold.jpg">
-<div class="container">
-  <span class="tag">OFFRE PREMIUM</span>
-  <h1>EAH <span class="gold">GOLD ♛</span></h1>
-  <p>Une carte et une plateforme professionnelle pour vos profils numériques.</p>
 </div>
+
 </section>
-<section class="content">
+
+</div>
+
+<!-- =====================================
+     EAH GOLD
+====================================== -->
+
+<div id="gold" class="page">
+
+<section class="hero compact goldhero"
+         data-banner="bandeau-gold.jpg">
+
 <div class="container">
+
+  <span class="tag">OFFRE PREMIUM</span>
+
+  <h1>EAH <span class="gold">GOLD ♛</span></h1>
+
+  <p>
+    Une carte et une plateforme professionnelle
+    pour vos profils numériques.
+  </p>
+
+</div>
+
+</section>
+
+<!-- VIDEO GOLD -->
+
+<section class="promo-section">
+
+  <div class="container">
+
+    <div class="promo-heading">
+
+      <span class="tag">L'EXPÉRIENCE EAH GOLD</span>
+
+      <h2>
+        Une plateforme
+        <span class="gold">à votre image</span>
+      </h2>
+
+      <p>
+        Fidélisez vos clients et développez votre activité
+        grâce aux profils numériques personnalisés.
+      </p>
+
+    </div>
+
+    <div class="video-mount"
+         data-video="videos/Magasin.mp4"
+         data-title="Présentation EAH Gold"
+         data-poster="bandeau-gold.jpg"
+         data-theme="gold">
+    </div>
+
+  </div>
+
+</section>
+
+<section class="content">
+
+<div class="container">
+
   <div class="grid">
+
     <div>
+
       <h2>Une expérience digitale unique</h2>
-      <p>Chaque carte NFC devient un accès à un profil numérique personnalisé.</p>
+
+      <p>
+        Chaque carte NFC devient un accès
+        à un profil numérique personnalisé.
+      </p>
+
       <p>✓ Profils numériques uniques</p>
       <p>✓ Compte créé au premier scan</p>
       <p>✓ Système d'authentification</p>
       <p>✓ Partage d'informations</p>
       <p>✓ Fidélisation de vos clients</p>
       <p>✓ Plateforme professionnelle dédiée</p>
+
     </div>
+
     <div class="phone">
+
       <div class="phone-screen">
+
         <h3>EAH <span class="gold">GOLD</span></h3>
+
         <div style="font-size:50px">👤</div>
+
         <div class="phone-line">Profil numérique</div>
         <div class="phone-line">Informations personnelles</div>
         <div class="phone-line">Réservations</div>
         <div class="phone-line">Statistiques</div>
         <div class="phone-line">Avantages</div>
+
       </div>
+
     </div>
+
   </div>
+
   <div class="grid" style="margin-top:35px">
-    <div class="panel"><h2>50 profils</h2><p>Cartes NFC et plateforme dédiée.</p><h3 class="gold">Prix sur devis</h3><button class="btn goldbtn" onclick="requestGold('50 profils')">Demander un devis</button></div>
-    <div class="panel"><h2>100 profils</h2><p>Cartes NFC et plateforme dédiée.</p><h3 class="gold">Prix sur devis</h3><button class="btn goldbtn" onclick="requestGold('100 profils')">Demander un devis</button></div>
+
+    <div class="panel">
+
+      <h2>50 profils</h2>
+
+      <p>Cartes NFC et plateforme dédiée.</p>
+
+      <h3 class="gold">Prix sur devis</h3>
+
+      <button class="btn goldbtn"
+              onclick="requestGold('50 profils')">
+
+        Demander un devis
+
+      </button>
+
+    </div>
+
+    <div class="panel">
+
+      <h2>100 profils</h2>
+
+      <p>Cartes NFC et plateforme dédiée.</p>
+
+      <h3 class="gold">Prix sur devis</h3>
+
+      <button class="btn goldbtn"
+              onclick="requestGold('100 profils')">
+
+        Demander un devis
+
+      </button>
+
+    </div>
+
   </div>
-</div>
-</section>
+
 </div>
 
-<!-- REALISATIONS -->
+</section>
+
+</div>
+
+<!-- =====================================
+     REALISATIONS
+====================================== -->
+
 <div id="realisations" class="page">
-<section class="hero compact" data-banner="bandeau-realisations.jpg">
+
+<section class="hero compact"
+         data-banner="bandeau-realisations.jpg">
+
 <div class="container">
+
   <span class="tag">NOTRE PORTFOLIO</span>
-  <h1>Nos <span class="cyan">réalisations</span></h1>
-  <p>Quatre univers professionnels, quatre exemples de solutions digitales.</p>
-</div>
-</section>
-<section class="content">
-<div class="container">
-<div class="portfolio">
-  <div class="portfolio-card" data-image="e-commerce.jpg" onclick="showPage('ecommerce')"><div class="symbol">🛍️</div><h3>E-commerce</h3><p>Boutique et collections →</p></div>
-  <div class="portfolio-card" data-image="restaurant.jpg" onclick="showPage('restaurant')"><div class="symbol">🍽️</div><h3>Restaurant</h3><p>Menus et réservations →</p></div>
-  <div class="portfolio-card" data-image="sport.jpg" onclick="showPage('sport')"><div class="symbol">🏆</div><h3>Sport</h3><p>Clubs et performances →</p></div>
-  <div class="portfolio-card" data-image="artisan.jpg" onclick="showPage('artisan')"><div class="symbol">🛠️</div><h3>Artisan</h3><p>Visibilité et contact →</p></div>
-</div>
-</div>
-</section>
+
+  <h1>
+    Nos <span class="cyan">réalisations</span>
+  </h1>
+
+  <p>
+    Quatre univers professionnels,
+    quatre exemples de solutions digitales.
+  </p>
+
 </div>
 
-<!-- PAGES REALISATIONS -->
-<div id="ecommerce" class="page">
-<section class="hero compact" data-banner="bandeau-e-commerce.jpg"><div class="container"><span class="tag">RÉALISATION DIGITALE</span><h1>E-commerce</h1><p>EAH Club — boutique et collections</p></div></section>
-<section class="content"><div class="container"><div class="link-external"><a class="btn" target="_blank" rel="noopener" href="https://eahconform.github.io/EAH-club/#collection">Ouvrir le site E-commerce ↗</a></div><iframe class="preview-frame" title="EAH Club" loading="lazy" src="https://eahconform.github.io/EAH-club/#collection"></iframe><p class="notice">Si l'intégration est bloquée par le site source, utilisez le bouton pour l'ouvrir.</p></div></section>
+</section>
+
+<section class="content">
+
+<div class="container">
+
+<div class="portfolio">
+
+  <div class="portfolio-card"
+       data-image="e-commerce.jpg"
+       onclick="showPage('ecommerce')">
+
+    <div class="symbol">🛍️</div>
+
+    <h3>E-commerce</h3>
+
+    <p>Boutique et collections →</p>
+
+  </div>
+
+  <div class="portfolio-card"
+       data-image="restaurant.jpg"
+       onclick="showPage('restaurant')">
+
+    <div class="symbol">🍽️</div>
+
+    <h3>Restaurant</h3>
+
+    <p>Menus et réservations →</p>
+
+  </div>
+
+  <div class="portfolio-card"
+       data-image="sport.jpg"
+       onclick="showPage('sport')">
+
+    <div class="symbol">🏆</div>
+
+    <h3>Sport</h3>
+
+    <p>Clubs et performances →</p>
+
+  </div>
+
+  <div class="portfolio-card"
+       data-image="artisan.jpg"
+       onclick="showPage('artisan')">
+
+    <div class="symbol">🛠️</div>
+
+    <h3>Artisan</h3>
+
+    <p>Visibilité et contact →</p>
+
+  </div>
+
 </div>
+
+</div>
+
+</section>
+
+</div>
+
+<!-- =====================================
+     E-COMMERCE
+====================================== -->
+
+<div id="ecommerce" class="page">
+
+<section class="hero compact"
+         data-banner="bandeau-e-commerce.jpg">
+
+  <div class="container">
+
+    <span class="tag">RÉALISATION DIGITALE</span>
+
+    <h1>E-commerce</h1>
+
+    <p>EAH Club — boutique et collections</p>
+
+  </div>
+
+</section>
+
+<!-- VIDEO E-COMMERCE -->
+
+<section class="promo-section">
+
+  <div class="container">
+
+    <div class="promo-heading">
+
+      <span class="tag">COMMERCE CONNECTÉ</span>
+
+      <h2>
+        Développez votre
+        <span class="cyan">boutique en ligne</span>
+      </h2>
+
+      <p>
+        Une expérience digitale personnalisée
+        pour vos clients et votre entreprise.
+      </p>
+
+    </div>
+
+    <div class="video-mount"
+         data-video="videos/Magasin.mp4"
+         data-title="Solution E-commerce EAH"
+         data-poster="bandeau-e-commerce.jpg">
+    </div>
+
+  </div>
+
+</section>
+
+<section class="content">
+
+  <div class="container">
+
+    <div class="link-external">
+
+      <a class="btn"
+         target="_blank"
+         rel="noopener"
+         href="https://eahconform.github.io/EAH-club/#collection">
+
+        Ouvrir le site E-commerce ↗
+
+      </a>
+
+    </div>
+
+    <iframe class="preview-frame"
+            title="EAH Club"
+            loading="lazy"
+            src="https://eahconform.github.io/EAH-club/#collection">
+    </iframe>
+
+    <p class="notice">
+
+      Si l'intégration est bloquée par le site source,
+      utilisez le bouton pour l'ouvrir.
+
+    </p>
+
+  </div>
+
+</section>
+
+</div>
+
+<!-- =====================================
+     RESTAURANT
+====================================== -->
 
 <div id="restaurant" class="page">
-<section class="hero compact" data-banner="bandeau-restaurant.jpg"><div class="container"><span class="tag">RÉALISATION DIGITALE</span><h1>Restaurant</h1><p>Jardin Émile — menus digitaux</p></div></section>
-<section class="content"><div class="container"><div class="link-external"><a class="btn" target="_blank" rel="noopener" href="https://eahconform.github.io/Jardin-Emile/#menus">Ouvrir le site Restaurant ↗</a></div><iframe class="preview-frame" title="Jardin Émile" loading="lazy" src="https://eahconform.github.io/Jardin-Emile/#menus"></iframe></div></section>
+
+<section class="hero compact"
+         data-banner="bandeau-restaurant.jpg">
+
+  <div class="container">
+
+    <span class="tag">RÉALISATION DIGITALE</span>
+
+    <h1>Restaurant</h1>
+
+    <p>Jardin Émile — menus digitaux</p>
+
+  </div>
+
+</section>
+
+<!-- VIDEO RESTAURANT -->
+
+<section class="promo-section">
+
+  <div class="container">
+
+    <div class="promo-heading">
+
+      <span class="tag">RESTAURATION CONNECTÉE</span>
+
+      <h2>
+        Valorisez votre
+        <span class="cyan">établissement</span>
+      </h2>
+
+      <p>
+        Menus digitaux, avis clients, visibilité
+        et communication personnalisée.
+      </p>
+
+    </div>
+
+    <div class="video-mount"
+         data-video="videos/Restaurant.mp4"
+         data-title="Solution Restaurant EAH"
+         data-poster="bandeau-restaurant.jpg">
+    </div>
+
+  </div>
+
+</section>
+
+<section class="content">
+
+  <div class="container">
+
+    <div class="link-external">
+
+      <a class="btn"
+         target="_blank"
+         rel="noopener"
+         href="https://eahconform.github.io/Jardin-Emile/#menus">
+
+        Ouvrir le site Restaurant ↗
+
+      </a>
+
+    </div>
+
+    <iframe class="preview-frame"
+            title="Jardin Émile"
+            loading="lazy"
+            src="https://eahconform.github.io/Jardin-Emile/#menus">
+    </iframe>
+
+  </div>
+
+</section>
+
 </div>
+
+<!-- =====================================
+     SPORT
+====================================== -->
 
 <div id="sport" class="page">
-<section class="hero compact" data-banner="bandeau-sport.jpg"><div class="container"><span class="tag">RÉALISATION DIGITALE</span><h1>Sport</h1><p>EAH Diving Club Pro — plateforme sportive</p></div></section>
-<section class="content"><div class="container"><div class="link-external"><a class="btn" target="_blank" rel="noopener" href="https://eahconform.github.io/EAH-DIVING-CLUB-PRO/index.html#accueil">Ouvrir le site Sport ↗</a></div><iframe class="preview-frame" title="EAH Diving Club Pro" loading="lazy" src="https://eahconform.github.io/EAH-DIVING-CLUB-PRO/index.html#accueil"></iframe></div></section>
+
+<section class="hero compact"
+         data-banner="bandeau-sport.jpg">
+
+  <div class="container">
+
+    <span class="tag">RÉALISATION DIGITALE</span>
+
+    <h1>Sport</h1>
+
+    <p>EAH Diving Club Pro — plateforme sportive</p>
+
+  </div>
+
+</section>
+
+<!-- VIDEO SPORT -->
+
+<section class="promo-section">
+
+  <div class="container">
+
+    <div class="promo-heading">
+
+      <span class="tag">SPORT CONNECTÉ</span>
+
+      <h2>
+        Digitalisez votre
+        <span class="cyan">activité sportive</span>
+      </h2>
+
+      <p>
+        Profils d'adhérents, coaching, exercices,
+        performances et suivi personnalisé.
+      </p>
+
+    </div>
+
+    <div class="video-mount"
+         data-video="videos/Sport.mp4"
+         data-title="Solution Sport EAH"
+         data-poster="bandeau-sport.jpg">
+    </div>
+
+  </div>
+
+</section>
+
+<section class="content">
+
+  <div class="container">
+
+    <div class="link-external">
+
+      <a class="btn"
+         target="_blank"
+         rel="noopener"
+         href="https://eahconform.github.io/EAH-DIVING-CLUB-PRO/index.html#accueil">
+
+        Ouvrir le site Sport ↗
+
+      </a>
+
+    </div>
+
+    <iframe class="preview-frame"
+            title="EAH Diving Club Pro"
+            loading="lazy"
+            src="https://eahconform.github.io/EAH-DIVING-CLUB-PRO/index.html#accueil">
+    </iframe>
+
+  </div>
+
+</section>
+
 </div>
+
+<!-- =====================================
+     ARTISAN
+====================================== -->
 
 <div id="artisan" class="page">
-<section class="hero compact" data-banner="bandeau-artisan.jpg"><div class="container"><span class="tag">RÉALISATION DIGITALE</span><h1>Artisan</h1><p>EGT Tahrati — visibilité et contact</p></div></section>
-<section class="content"><div class="container"><div class="link-external"><a class="btn" target="_blank" rel="noopener" href="https://eahconform.github.io/egt-tahrati/">Ouvrir le site Artisan ↗</a></div><iframe class="preview-frame" title="EGT Tahrati" loading="lazy" src="https://eahconform.github.io/egt-tahrati/"></iframe></div></section>
+
+<section class="hero compact"
+         data-banner="bandeau-artisan.jpg">
+
+  <div class="container">
+
+    <span class="tag">RÉALISATION DIGITALE</span>
+
+    <h1>Artisan</h1>
+
+    <p>EGT Tahrati — visibilité et contact</p>
+
+  </div>
+
+</section>
+
+<!-- VIDEO ARTISAN -->
+
+<section class="promo-section">
+
+  <div class="container">
+
+    <div class="promo-heading">
+
+      <span class="tag">ARTISAN CONNECTÉ</span>
+
+      <h2>
+        Développez votre
+        <span class="cyan">visibilité professionnelle</span>
+      </h2>
+
+      <p>
+        Partagez vos coordonnées, vos prestations,
+        vos réalisations et vos avis clients.
+      </p>
+
+    </div>
+
+    <div class="video-mount"
+         data-video="videos/Nfc.mp4"
+         data-title="Solution NFC pour les artisans"
+         data-poster="bandeau-artisan.jpg">
+    </div>
+
+  </div>
+
+</section>
+
+<section class="content">
+
+  <div class="container">
+
+    <div class="link-external">
+
+      <a class="btn"
+         target="_blank"
+         rel="noopener"
+         href="https://eahconform.github.io/egt-tahrati/">
+
+        Ouvrir le site Artisan ↗
+
+      </a>
+
+    </div>
+
+    <iframe class="preview-frame"
+            title="EGT Tahrati"
+            loading="lazy"
+            src="https://eahconform.github.io/egt-tahrati/">
+    </iframe>
+
+  </div>
+
+</section>
+
 </div>
 
-<!-- CONTACT -->
+<!-- =====================================
+     CONTACT
+====================================== -->
+
 <div id="contact" class="page">
-<section class="hero compact" data-banner="bandeau-contact.jpg">
+
+<section class="hero compact"
+         data-banner="bandeau-contact.jpg">
+
 <div class="container">
+
   <span class="tag">CONTACT</span>
-  <h1>Parlons de <span class="cyan">votre projet</span></h1>
-  <p>Expliquez-nous votre besoin pour recevoir une réponse personnalisée.</p>
+
+  <h1>
+    Parlons de <span class="cyan">votre projet</span>
+  </h1>
+
+  <p>
+    Expliquez-nous votre besoin
+    pour recevoir une réponse personnalisée.
+  </p>
+
 </div>
+
 </section>
+
 <section class="content">
+
 <div class="container grid">
+
   <div class="panel">
+
     <h2>Nous contacter</h2>
-    <p>☎ <a href="tel:+33633959785">06 33 95 97 85</a></p>
-    <p>✉ <a href="mailto:Goin.eah@gmail.com">Goin.eah@gmail.com</a></p>
-    <p>Cartes NFC, sites internet, référencement, communication et plateformes professionnelles.</p>
+
+    <p>
+      ☎ <a href="tel:+33633959785">06 33 95 97 85</a>
+    </p>
+
+    <p>
+      ✉ <a href="mailto:Goin.eah@gmail.com">Goin.eah@gmail.com</a>
+    </p>
+
+    <p>
+      Cartes NFC, sites internet, référencement,
+      communication et plateformes professionnelles.
+    </p>
+
   </div>
+
   <div class="panel">
-    <form action="https://formsubmit.co/Goin.eah@gmail.com" method="POST" enctype="multipart/form-data">
-      <input type="hidden" name="_subject" value="Nouvelle demande EAH Conformités">
-      <input type="hidden" name="_captcha" value="true">
-      <div class="form-field"><label>Nom *</label><input name="Nom" required></div>
-      <div class="form-field"><label>Entreprise</label><input name="Entreprise"></div>
-      <div class="form-field"><label>E-mail *</label><input type="email" name="email" required></div>
-      <div class="form-field"><label>Téléphone</label><input type="tel" name="Telephone"></div>
-      <div class="form-field"><label>Offre souhaitée</label><select id="contactOffer" name="Offre"><option>Demande générale</option><option>Starter</option><option>Gold - 50 profils</option><option>Gold - 100 profils</option><option>Site internet</option><option>Autre</option></select></div>
-      <div class="form-field"><label>Votre projet *</label><textarea name="Projet" required></textarea></div>
-      <div class="form-field"><label>Logo ou image</label><input type="file" name="attachment" accept="image/png,image/jpeg,image/webp"></div>
-      <label class="small"><input type="checkbox" required> J'accepte l'utilisation de mes informations pour répondre à ma demande.</label>
+
+    <form action="https://formsubmit.co/Goin.eah@gmail.com"
+          method="POST"
+          enctype="multipart/form-data">
+
+      <input type="hidden"
+             name="_subject"
+             value="Nouvelle demande EAH Conformités">
+
+      <input type="hidden"
+             name="_captcha"
+             value="true">
+
+      <div class="form-field">
+
+        <label>Nom *</label>
+
+        <input name="Nom" required>
+
+      </div>
+
+      <div class="form-field">
+
+        <label>Entreprise</label>
+
+        <input name="Entreprise">
+
+      </div>
+
+      <div class="form-field">
+
+        <label>E-mail *</label>
+
+        <input type="email"
+               name="email"
+               required>
+
+      </div>
+
+      <div class="form-field">
+
+        <label>Téléphone</label>
+
+        <input type="tel"
+               name="Telephone">
+
+      </div>
+
+      <div class="form-field">
+
+        <label>Offre souhaitée</label>
+
+        <select id="contactOffer" name="Offre">
+
+          <option>Demande générale</option>
+          <option>Starter</option>
+          <option>Gold - 50 profils</option>
+          <option>Gold - 100 profils</option>
+          <option>Site internet</option>
+          <option>Autre</option>
+
+        </select>
+
+      </div>
+
+      <div class="form-field">
+
+        <label>Votre projet *</label>
+
+        <textarea name="Projet" required></textarea>
+
+      </div>
+
+      <div class="form-field">
+
+        <label>Logo ou image</label>
+
+        <input type="file"
+               name="attachment"
+               accept="image/png,image/jpeg,image/webp">
+
+      </div>
+
+      <label class="small">
+
+        <input type="checkbox" required>
+
+        J'accepte l'utilisation de mes informations
+        pour répondre à ma demande.
+
+      </label>
+
       <br><br>
-      <button type="submit" class="btn">Envoyer ma demande →</button>
+
+      <button type="submit" class="btn">
+        Envoyer ma demande →
+      </button>
+
     </form>
+
   </div>
+
 </div>
+
 </section>
+
 </div>
 
 </main>
 
+<!-- =====================================
+     PIED DE PAGE
+====================================== -->
+
 <footer>
+
 <div class="container">
+
   <div>
-    <h3>EAH <span class="cyan">Conformités</span></h3>
-    <p>Référencement · Site internet · Communication · E-commerce</p>
-    <p class="small">© <span id="year"></span> EAH Conformités</p>
+
+    <h3>
+      EAH <span class="cyan">Conformités</span>
+    </h3>
+
+    <p>
+      Référencement · Site internet · Communication · E-commerce
+    </p>
+
+    <p class="small">
+      © <span id="year"></span> EAH Conformités
+    </p>
+
   </div>
+
   <div>
+
     <h3>Contact</h3>
-    <p><a href="tel:+33633959785">06 33 95 97 85</a></p>
-    <p><a href="mailto:Goin.eah@gmail.com">Goin.eah@gmail.com</a></p>
+
+    <p>
+      <a href="tel:+33633959785">06 33 95 97 85</a>
+    </p>
+
+    <p>
+      <a href="mailto:Goin.eah@gmail.com">Goin.eah@gmail.com</a>
+    </p>
+
   </div>
+
 </div>
+
 </footer>
 
 <script>
-// NAVIGATION
-const pageIds=["accueil","starter","gold","realisations","ecommerce","restaurant","sport","artisan","contact"];
-function showPage(id){
-  if(!pageIds.includes(id))id="accueil";
-  document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id===id));
-  document.querySelectorAll("nav button[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===id));
-  document.getElementById("navigation").classList.remove("open");
-  document.getElementById("menuBtn").setAttribute("aria-expanded","false");
-  history.replaceState(null,"","#"+id);
-  window.scrollTo({top:0,behavior:"instant"});
-}
-function toggleMenu(){
-  const nav=document.getElementById("navigation");
-  const opened=nav.classList.toggle("open");
-  document.getElementById("menuBtn").setAttribute("aria-expanded",String(opened));
-}
-window.addEventListener("hashchange",()=>showPage(location.hash.slice(1)));
-document.getElementById("year").textContent=new Date().getFullYear();
 
-// IMAGES FACULTATIVES
-function imageExists(path,callback){
-  const img=new Image();
-  img.onload=()=>callback(true);
-  img.onerror=()=>callback(false);
-  img.src=path;
-}
-document.querySelectorAll("[data-banner]").forEach(el=>{
-  const file=el.dataset.banner;
-  imageExists(file,exists=>{
-    if(exists){
-      el.style.backgroundImage=`linear-gradient(90deg,#031126d9,#03112666),url("${file}")`;
-      el.style.backgroundSize="cover";
-      el.style.backgroundPosition="center";
-    }
-  });
-});
-imageExists("fond.jpg",exists=>{
-  if(exists){
-    document.body.style.backgroundImage='linear-gradient(#031126dd,#031126ee),url("fond.jpg")';
-    document.body.style.backgroundAttachment="fixed";
-    document.body.style.backgroundSize="cover";
-  }
-});
-document.querySelectorAll("[data-image]").forEach(el=>{
-  const file=el.dataset.image;
-  imageExists(file,exists=>{
-    if(exists){
-      el.style.backgroundImage=`linear-gradient(transparent,#031126dd),url("${file}")`;
-      el.classList.add("has-image");
-    }
-  });
-});
-imageExists("carte-recto.png",exists=>{
-  if(exists){
-    const el=document.getElementById("cardFront");
-    el.style.background=`url("carte-recto.png") center/cover no-repeat`;
-    el.replaceChildren();
-  }
-});
-imageExists("carte-verso.png",exists=>{
-  if(exists){
-    const el=document.getElementById("cardBack");
-    el.style.background=`url("carte-verso.png") center/cover no-repeat`;
-    el.replaceChildren();
-  }
-});
-document.getElementById("profileImage").onerror=function(){
-  this.style.display="none";
-  this.parentElement.innerHTML='<svg viewBox="0 0 70 90" width="100%" height="100%"><circle cx="35" cy="30" r="15" fill="#bceaff"/><path d="M6 90Q8 52 35 52T64 90" fill="#bceaff"/></svg>';
+/* =========================================
+   GESTION DES VIDEOS
+========================================= */
+
+const promoPlayers = [];
+
+const reducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+);
+
+const videoIcons = {
+
+  muted: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M11 5L6 9H3v6h3l5 4z"/>
+      <path d="M16 9l5 6M21 9l-5 6"/>
+    </svg>`,
+
+  sound: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M11 5L6 9H3v6h3l5 4z"/>
+      <path d="M15 9a4 4 0 010 6"/>
+      <path d="M18 5a9 9 0 010 14"/>
+    </svg>`,
+
+  play: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8 5l12 7-12 7z"/>
+    </svg>`,
+
+  pause: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M9 5v14M15 5v14"/>
+    </svg>`,
+
+  fullscreen: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5"/>
+    </svg>`
+
 };
 
-// QR CODE
-const qr=document.getElementById("cardQR");
-const siteURL=location.protocol.startsWith("http")
-  ?location.origin+location.pathname
-  :"https://eahconform.github.io/";
-qr.src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data="+encodeURIComponent(siteURL);
-qr.onerror=()=>{
-  qr.style.display="none";
-  qr.parentElement.insertAdjacentHTML("afterbegin","<small>QR indisponible</small>");
-};
+function updateVideoButtons(player){
 
-// CARTE 3D
-const rotor=document.getElementById("cardRotor");
-let rotationPaused=false;
-let manualSide=false;
-function toggleRotation(){
-  const button=document.getElementById("pauseCard");
-  if(rotationPaused){
-    manualSide=false;
-    rotor.style.transition="none";
-    rotor.style.transform="";
-    rotor.style.animation="none";
-    void rotor.offsetWidth;
-    rotor.style.animation="cardSpin 12s linear infinite";
-    rotor.style.animationPlayState="running";
-    rotationPaused=false;
-    button.textContent="⏸ Arrêter la rotation";
-    document.getElementById("flipCard").textContent="Voir le verso";
+  const {video,soundButton,playButton} = player;
+
+  soundButton.innerHTML = video.muted
+    ? videoIcons.muted + " Activer le son"
+    : videoIcons.sound + " Couper le son";
+
+  soundButton.setAttribute(
+    "aria-pressed",
+    String(!video.muted)
+  );
+
+  playButton.innerHTML = video.paused
+    ? videoIcons.play + " Lecture"
+    : videoIcons.pause + " Pause";
+
+}
+
+function loadPromoVideo(player){
+
+  if(player.loaded) return;
+
+  player.loaded = true;
+
+  player.video.src = player.file;
+
+  player.video.load();
+
+}
+
+function pauseOtherVideos(current){
+
+  promoPlayers.forEach(player => {
+
+    if(player !== current){
+
+      player.video.pause();
+
+      player.video.muted = true;
+
+      updateVideoButtons(player);
+
+    }
+
+  });
+
+}
+
+function playPromoVideo(player,manual=false){
+
+  if(player.failed) return;
+
+  if(!player.page.classList.contains("active")) return;
+
+  if(document.hidden) return;
+
+  if(!manual && reducedMotion.matches) return;
+
+  if(!manual && player.manualPaused) return;
+
+  loadPromoVideo(player);
+
+  pauseOtherVideos(player);
+
+  const promise = player.video.play();
+
+  if(promise && typeof promise.catch === "function"){
+
+    promise.catch(() => {
+
+      updateVideoButtons(player);
+
+    });
+
+  }
+
+}
+
+function syncPromoVideos(){
+
+  promoPlayers.forEach(player => {
+
+    const active = player.page.classList.contains("active");
+
+    if(!active || document.hidden){
+
+      player.video.pause();
+
+      player.video.muted = true;
+
+      if(!active){
+
+        player.visible = false;
+
+        player.manualPaused = false;
+
+      }
+
+      updateVideoButtons(player);
+
+      return;
+
+    }
+
+    if(player.visible && !player.manualPaused){
+
+      playPromoVideo(player);
+
+    }else if(!player.visible){
+
+      player.video.pause();
+
+    }
+
+  });
+
+}
+
+function createPromoPlayers(){
+
+  document.querySelectorAll(".video-mount").forEach(mount => {
+
+    const page = mount.closest(".page");
+
+    const file = mount.dataset.video;
+
+    const title = mount.dataset.title || "Vidéo EAH";
+
+    const poster = mount.dataset.poster;
+
+    const shell = document.createElement("div");
+
+    shell.className = "video-shell";
+
+    if(mount.dataset.theme === "gold"){
+
+      shell.classList.add("gold-video");
+
+    }
+
+    const video = document.createElement("video");
+
+    video.className = "promo-video";
+
+    video.controls = true;
+
+    video.muted = true;
+
+    video.defaultMuted = true;
+
+    video.loop = true;
+
+    video.playsInline = true;
+
+    video.preload = "none";
+
+    video.setAttribute("muted","");
+
+    video.setAttribute("playsinline","");
+
+    video.setAttribute("webkit-playsinline","");
+
+    video.setAttribute("aria-label",title);
+
+    if(poster){
+
+      video.poster = poster;
+
+    }
+
+    const toolbar = document.createElement("div");
+
+    toolbar.className = "video-toolbar";
+
+    const label = document.createElement("div");
+
+    label.className = "video-label";
+
+    const dot = document.createElement("span");
+
+    dot.className = "video-dot";
+
+    label.appendChild(dot);
+
+    label.appendChild(document.createTextNode(title));
+
+    const actions = document.createElement("div");
+
+    actions.className = "video-actions";
+
+    const playButton = document.createElement("button");
+
+    playButton.type = "button";
+
+    playButton.className = "video-button";
+
+    const soundButton = document.createElement("button");
+
+    soundButton.type = "button";
+
+    soundButton.className = "video-button";
+
+    const fullscreenButton = document.createElement("button");
+
+    fullscreenButton.type = "button";
+
+    fullscreenButton.className = "video-button";
+
+    fullscreenButton.innerHTML =
+      videoIcons.fullscreen + " Plein écran";
+
+    actions.appendChild(playButton);
+
+    actions.appendChild(soundButton);
+
+    actions.appendChild(fullscreenButton);
+
+    toolbar.appendChild(label);
+
+    toolbar.appendChild(actions);
+
+    const errorMessage = document.createElement("div");
+
+    errorMessage.className = "video-error";
+
+    errorMessage.hidden = true;
+
+    errorMessage.textContent =
+      "La vidéo est momentanément indisponible.";
+
+    shell.appendChild(video);
+
+    shell.appendChild(toolbar);
+
+    shell.appendChild(errorMessage);
+
+    mount.appendChild(shell);
+
+    const caption = document.createElement("p");
+
+    caption.className = "video-caption";
+
+    caption.textContent =
+      "Activez le son pour profiter pleinement de la présentation.";
+
+    mount.appendChild(caption);
+
+    const player = {
+
+      video,
+
+      page,
+
+      file,
+
+      shell,
+
+      playButton,
+
+      soundButton,
+
+      fullscreenButton,
+
+      loaded:false,
+
+      visible:false,
+
+      manualPaused:false,
+
+      failed:false
+
+    };
+
+    promoPlayers.push(player);
+
+    updateVideoButtons(player);
+
+    /* Lecture et pause */
+
+    playButton.addEventListener("click",() => {
+
+      if(video.paused){
+
+        player.manualPaused = false;
+
+        playPromoVideo(player,true);
+
+      }else{
+
+        player.manualPaused = true;
+
+        video.pause();
+
+      }
+
+      updateVideoButtons(player);
+
+    });
+
+    /* Activation du son */
+
+    soundButton.addEventListener("click",() => {
+
+      if(player.failed) return;
+
+      if(video.muted){
+
+        pauseOtherVideos(player);
+
+        video.muted = false;
+
+        player.manualPaused = false;
+
+        playPromoVideo(player,true);
+
+      }else{
+
+        video.muted = true;
+
+      }
+
+      updateVideoButtons(player);
+
+    });
+
+    /* Plein écran */
+
+    fullscreenButton.addEventListener("click",async () => {
+
+      try{
+
+        if(document.fullscreenElement){
+
+          await document.exitFullscreen();
+
+        }else if(shell.requestFullscreen){
+
+          await shell.requestFullscreen();
+
+        }else if(video.webkitEnterFullscreen){
+
+          video.webkitEnterFullscreen();
+
+        }
+
+      }catch(error){
+
+        console.warn("Plein écran indisponible",error);
+
+      }
+
+    });
+
+    if(
+      !shell.requestFullscreen &&
+      !video.webkitEnterFullscreen
+    ){
+
+      fullscreenButton.hidden = true;
+
+    }
+
+    /* Synchronisation des commandes */
+
+    video.addEventListener("play",() => {
+
+      player.manualPaused = false;
+
+      updateVideoButtons(player);
+
+    });
+
+    video.addEventListener("pause",() => {
+
+      if(
+        player.visible &&
+        page.classList.contains("active") &&
+        !document.hidden
+      ){
+
+        player.manualPaused = true;
+
+      }
+
+      updateVideoButtons(player);
+
+    });
+
+    video.addEventListener("volumechange",() => {
+
+      updateVideoButtons(player);
+
+    });
+
+    /* Gestion des erreurs */
+
+    video.addEventListener("error",() => {
+
+      player.failed = true;
+
+      errorMessage.hidden = false;
+
+      playButton.disabled = true;
+
+      soundButton.disabled = true;
+
+      console.warn(
+        "Vidéo introuvable ou illisible :",
+        file
+      );
+
+    });
+
+  });
+
+  /* Lecture automatique uniquement à l'écran */
+
+  if("IntersectionObserver" in window){
+
+    const videoObserver = new IntersectionObserver(entries => {
+
+      entries.forEach(entry => {
+
+        const player = promoPlayers.find(
+          item => item.video === entry.target
+        );
+
+        if(!player) return;
+
+        const wasVisible = player.visible;
+
+        player.visible =
+          entry.isIntersecting &&
+          entry.intersectionRatio >= 0.25;
+
+        if(player.visible){
+
+          if(!wasVisible){
+
+            player.manualPaused = false;
+
+          }
+
+          playPromoVideo(player);
+
+        }else{
+
+          player.video.pause();
+
+        }
+
+      });
+
+    },{
+
+      threshold:[0,0.25,0.5,1]
+
+    });
+
+    promoPlayers.forEach(player => {
+
+      videoObserver.observe(player.video);
+
+    });
+
   }else{
-    rotor.style.animationPlayState="paused";
-    rotationPaused=true;
-    button.textContent="▶ Reprendre la rotation";
+
+    function checkVideoVisibility(){
+
+      promoPlayers.forEach(player => {
+
+        const rect = player.video.getBoundingClientRect();
+
+        player.visible =
+          rect.height > 0 &&
+          rect.bottom > 0 &&
+          rect.top < window.innerHeight;
+
+      });
+
+      syncPromoVideos();
+
+    }
+
+    window.addEventListener(
+      "scroll",
+      checkVideoVisibility,
+      {passive:true}
+    );
+
+    window.addEventListener(
+      "resize",
+      checkVideoVisibility
+    );
+
+    window.addEventListener(
+      "hashchange",
+      checkVideoVisibility
+    );
+
+    checkVideoVisibility();
+
   }
-}
-function flipCard(){
-  manualSide=!manualSide;
-  rotationPaused=true;
-  rotor.style.animation="none";
-  rotor.style.transition="transform .8s ease";
-  rotor.style.transform=manualSide?"rotateY(180deg)":"rotateY(0deg)";
-  document.getElementById("pauseCard").textContent="▶ Reprendre la rotation";
-  document.getElementById("flipCard").textContent=manualSide?"Voir le recto":"Voir le verso";
+
 }
 
-// CALCULATEUR STARTER
-const optionNames=[
-  "Avis Google",
-  "Avis TripAdvisor",
-  "QR code",
-  "Questionnaire de satisfaction",
-  "Réseaux sociaux",
-  "Vidéos",
-  "Autres liens"
+document.addEventListener(
+  "visibilitychange",
+  syncPromoVideos
+);
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+const pageIds = [
+
+  "accueil",
+  "starter",
+  "gold",
+  "realisations",
+  "ecommerce",
+  "restaurant",
+  "sport",
+  "artisan",
+  "contact"
+
 ];
-const prices={1:40,5:70,10:100};
-let currentPack=1;
-let selectedOptions=[];
-const optionsList=document.getElementById("optionsList");
-optionNames.forEach((name,index)=>{
-  const div=document.createElement("div");
-  div.className="option";
-  const id="option"+index;
-  div.innerHTML=`<input type="checkbox" id="${id}"><label for="${id}">${name}</label><small></small>`;
-  const input=div.querySelector("input");
-  input.addEventListener("change",()=>{
-    if(input.checked)selectedOptions.push(name);
-    else selectedOptions=selectedOptions.filter(x=>x!==name);
-    calculatePrice();
+
+function showPage(id){
+
+  if(!pageIds.includes(id)){
+
+    id = "accueil";
+
+  }
+
+  document.querySelectorAll(".page").forEach(page => {
+
+    page.classList.toggle(
+      "active",
+      page.id === id
+    );
+
   });
-  optionsList.appendChild(div);
-});
-function selectPack(quantity){
-  currentPack=quantity;
-  document.querySelectorAll(".pack").forEach(el=>{
-    const selected=Number(el.dataset.pack)===quantity;
-    el.classList.toggle("selected",selected);
-    el.querySelector("input").checked=selected;
+
+  const portfolioPages = [
+
+    "ecommerce",
+    "restaurant",
+    "sport",
+    "artisan"
+
+  ];
+
+  const activeNav = portfolioPages.includes(id)
+    ? "realisations"
+    : id;
+
+  document.querySelectorAll(
+    "nav button[data-page]"
+  ).forEach(button => {
+
+    button.classList.toggle(
+      "active",
+      button.dataset.page === activeNav
+    );
+
   });
-  calculatePrice();
-}
-function calculatePrice(){
-  const extra=Math.max(0,selectedOptions.length-1)*5;
-  const total=prices[currentPack]+extra;
-  document.getElementById("totalPrice").textContent=total+" €";
-  document.getElementById("priceDetails").textContent=prices[currentPack]+" € de cartes + "+extra+" € d'options";
-  document.querySelectorAll(".option").forEach(div=>{
-    const name=div.querySelector("label").textContent;
-    const index=selectedOptions.indexOf(name);
-    div.querySelector("small").textContent=index===-1?"":index===0?"Offert":"+5 €";
+
+  document.getElementById("navigation")
+    .classList.remove("open");
+
+  document.getElementById("menuBtn")
+    .setAttribute("aria-expanded","false");
+
+  history.replaceState(
+    null,
+    "",
+    "#" + id
+  );
+
+  window.scrollTo({
+
+    top:0,
+
+    behavior:"instant"
+
   });
-  return total;
-}
-function prepareStarter(){
-  document.getElementById("formPack").value=currentPack+" carte(s)";
-  document.getElementById("formOptions").value=selectedOptions.length?selectedOptions.join(", "):"Aucune option";
-  document.getElementById("formPrice").value=calculatePrice()+" €";
-}
-function requestGold(pack){
-  showPage("contact");
-  document.getElementById("contactOffer").value="Gold - "+pack;
+
+  syncPromoVideos();
+
+  requestAnimationFrame(() => {
+
+    promoPlayers.forEach(player => {
+
+      if(!player.page.classList.contains("active")){
+
+        return;
+
+      }
+
+      const rect = player.video.getBoundingClientRect();
+
+      const visibleHeight = Math.max(
+        0,
+        Math.min(rect.bottom,window.innerHeight) -
+        Math.max(rect.top,0)
+      );
+
+      player.visible =
+        rect.height > 0 &&
+        visibleHeight / rect.height >= 0.25;
+
+    });
+
+    syncPromoVideos();
+
+  });
+
 }
 
-// INITIALISATION
+function toggleMenu(){
+
+  const nav = document.getElementById("navigation");
+
+  const opened = nav.classList.toggle("open");
+
+  document.getElementById("menuBtn")
+    .setAttribute(
+      "aria-expanded",
+      String(opened)
+    );
+
+}
+
+window.addEventListener("hashchange",() => {
+
+  showPage(location.hash.slice(1));
+
+});
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+/* =========================================
+   IMAGES FACULTATIVES
+========================================= */
+
+function imageExists(path,callback){
+
+  const img = new Image();
+
+  img.onload = () => callback(true);
+
+  img.onerror = () => callback(false);
+
+  img.src = path;
+
+}
+
+document.querySelectorAll("[data-banner]").forEach(el => {
+
+  const file = el.dataset.banner;
+
+  imageExists(file,exists => {
+
+    if(exists){
+
+      el.style.backgroundImage =
+        `linear-gradient(90deg,#031126d9,#03112666),url("${file}")`;
+
+      el.style.backgroundSize = "cover";
+
+      el.style.backgroundPosition = "center";
+
+    }
+
+  });
+
+});
+
+imageExists("fond.jpg",exists => {
+
+  if(exists){
+
+    document.body.style.backgroundImage =
+      'linear-gradient(#031126dd,#031126ee),url("fond.jpg")';
+
+    document.body.style.backgroundAttachment = "fixed";
+
+    document.body.style.backgroundSize = "cover";
+
+  }
+
+});
+
+document.querySelectorAll("[data-image]").forEach(el => {
+
+  const file = el.dataset.image;
+
+  imageExists(file,exists => {
+
+    if(exists){
+
+      el.style.backgroundImage =
+        `linear-gradient(transparent,#031126dd),url("${file}")`;
+
+      el.classList.add("has-image");
+
+    }
+
+  });
+
+});
+
+imageExists("carte-recto.png",exists => {
+
+  if(exists){
+
+    const el = document.getElementById("cardFront");
+
+    el.style.background =
+      'url("carte-recto.png") center/cover no-repeat';
+
+    el.replaceChildren();
+
+  }
+
+});
+
+imageExists("carte-verso.png",exists => {
+
+  if(exists){
+
+    const el = document.getElementById("cardBack");
+
+    el.style.background =
+      'url("carte-verso.png") center/cover no-repeat';
+
+    el.replaceChildren();
+
+  }
+
+});
+
+const profileImage = document.getElementById("profileImage");
+
+if(profileImage){
+
+  profileImage.onerror = function(){
+
+    this.style.display = "none";
+
+    this.parentElement.innerHTML = `
+      <svg viewBox="0 0 70 90"
+           width="100%"
+           height="100%">
+
+        <circle cx="35"
+                cy="30"
+                r="15"
+                fill="#bceaff"/>
+
+        <path d="M6 90Q8 52 35 52T64 90"
+              fill="#bceaff"/>
+
+      </svg>`;
+
+  };
+
+  if(profileImage.complete && !profileImage.naturalWidth){
+
+    profileImage.onerror();
+
+  }
+
+}
+
+/* =========================================
+   QR CODE
+========================================= */
+
+const qr = document.getElementById("cardQR");
+
+const siteURL = location.protocol.startsWith("http")
+
+  ? location.origin + location.pathname
+
+  : "https://eahconform.github.io/EAH-Conformit-/";
+
+if(qr){
+
+  qr.src =
+    "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data="
+    + encodeURIComponent(siteURL);
+
+  qr.onerror = () => {
+
+    qr.style.display = "none";
+
+    qr.parentElement.insertAdjacentHTML(
+      "afterbegin",
+      "<small>QR indisponible</small>"
+    );
+
+  };
+
+}
+
+/* =========================================
+   CARTE NFC 3D
+========================================= */
+
+const rotor = document.getElementById("cardRotor");
+
+let rotationPaused = false;
+
+let manualSide = false;
+
+function toggleRotation(){
+
+  const button = document.getElementById("pauseCard");
+
+  if(rotationPaused){
+
+    manualSide = false;
+
+    rotor.style.transition = "none";
+
+    rotor.style.transform = "";
+
+    rotor.style.animation = "none";
+
+    void rotor.offsetWidth;
+
+    rotor.style.animation = "cardSpin 12s linear infinite";
+
+    rotor.style.animationPlayState = "running";
+
+    rotationPaused = false;
+
+    button.textContent = "⏸ Arrêter la rotation";
+
+    document.getElementById("flipCard")
+      .textContent = "Voir le verso";
+
+  }else{
+
+    rotor.style.animationPlayState = "paused";
+
+    rotationPaused = true;
+
+    button.textContent = "▶ Reprendre la rotation";
+
+  }
+
+}
+
+function flipCard(){
+
+  manualSide = !manualSide;
+
+  rotationPaused = true;
+
+  rotor.style.animation = "none";
+
+  rotor.style.transition = "transform .8s ease";
+
+  rotor.style.transform = manualSide
+
+    ? "rotateY(180deg)"
+
+    : "rotateY(0deg)";
+
+  document.getElementById("pauseCard")
+    .textContent = "▶ Reprendre la rotation";
+
+  document.getElementById("flipCard")
+    .textContent = manualSide
+
+      ? "Voir le recto"
+
+      : "Voir le verso";
+
+}
+
+/* =========================================
+   CALCULATEUR STARTER
+========================================= */
+
+const optionNames = [
+
+  "Avis Google",
+
+  "Avis TripAdvisor",
+
+  "QR code",
+
+  "Questionnaire de satisfaction",
+
+  "Réseaux sociaux",
+
+  "Vidéos",
+
+  "Autres liens"
+
+];
+
+const prices = {
+
+  1:40,
+
+  5:70,
+
+  10:100
+
+};
+
+let currentPack = 1;
+
+let selectedOptions = [];
+
+const optionsList =
+  document.getElementById("optionsList");
+
+optionNames.forEach((name,index) => {
+
+  const div = document.createElement("div");
+
+  div.className = "option";
+
+  const id = "option" + index;
+
+  div.innerHTML = `
+    <input type="checkbox" id="${id}">
+    <label for="${id}">${name}</label>
+    <small></small>
+  `;
+
+  const input = div.querySelector("input");
+
+  input.addEventListener("change",() => {
+
+    if(input.checked){
+
+      selectedOptions.push(name);
+
+    }else{
+
+      selectedOptions = selectedOptions.filter(
+        item => item !== name
+      );
+
+    }
+
+    calculatePrice();
+
+  });
+
+  optionsList.appendChild(div);
+
+});
+
+function selectPack(quantity){
+
+  currentPack = quantity;
+
+  document.querySelectorAll(".pack").forEach(el => {
+
+    const selected =
+      Number(el.dataset.pack) === quantity;
+
+    el.classList.toggle(
+      "selected",
+      selected
+    );
+
+    el.querySelector("input").checked = selected;
+
+  });
+
+  calculatePrice();
+
+}
+
+function calculatePrice(){
+
+  const extra =
+    Math.max(0,selectedOptions.length - 1) * 5;
+
+  const total =
+    prices[currentPack] + extra;
+
+  document.getElementById("totalPrice")
+    .textContent = total + " €";
+
+  document.getElementById("priceDetails")
+    .textContent =
+      prices[currentPack] +
+      " € de cartes + " +
+      extra +
+      " € d'options";
+
+  document.querySelectorAll(".option").forEach(div => {
+
+    const name = div.querySelector("label").textContent;
+
+    const index = selectedOptions.indexOf(name);
+
+    div.querySelector("small").textContent =
+
+      index === -1
+
+        ? ""
+
+        : index === 0
+
+          ? "Offert"
+
+          : "+5 €";
+
+  });
+
+  return total;
+
+}
+
+function prepareStarter(){
+
+  document.getElementById("formPack")
+    .value = currentPack + " carte(s)";
+
+  document.getElementById("formOptions")
+    .value = selectedOptions.length
+
+      ? selectedOptions.join(", ")
+
+      : "Aucune option";
+
+  document.getElementById("formPrice")
+    .value = calculatePrice() + " €";
+
+}
+
+function requestGold(pack){
+
+  showPage("contact");
+
+  document.getElementById("contactOffer")
+    .value = "Gold - " + pack;
+
+}
+
+/* =========================================
+   INITIALISATION DU SITE
+========================================= */
+
+createPromoPlayers();
+
 calculatePrice();
-showPage(location.hash.slice(1)||"accueil");
+
+showPage(
+  location.hash.slice(1) || "accueil"
+);
+
 </script>
 
 </body>
